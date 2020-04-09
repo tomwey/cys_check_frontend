@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>会员登录</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="login-box">
+    <div class="login-box-inner">
+      <div class="form-box">
+        <h2 class="title">登录</h2>
+        <!-- <ion-list> -->
+        <ion-item>
+          <ion-label>手机</ion-label>
+          <ion-input
+            [(ngModel)]="user.mobile"
+            type="tel"
+            placeholder="输入手机号"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>密码</ion-label>
+          <ion-input
+            [(ngModel)]="user.password"
+            type="password"
+            placeholder="输入密码"
+          ></ion-input>
+        </ion-item>
+        <!-- </ion-list> -->
+
+        <div class="login-btn-box">
+          <ion-button
+            expand="full"
+            (click)="login()"
+            [disabled]="!user.mobile || !user.password"
+            >登 录</ion-button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
