@@ -1,0 +1,5 @@
+<div class="switch animate" [class.on]="on" [style.background]="on ? onColor : offColor" [class.off]="!on" tappable
+  (click)="toggle($event);">
+  <div class="switch-inner"></div>
+  <div class="text">{{on ? onText : offText}}</div>
+</div>

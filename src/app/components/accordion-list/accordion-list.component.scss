@@ -1,0 +1,11 @@
+.wrapper {
+    transition: 0.2s linear;
+}
+
+.expand-wrapper {
+    width: 100%;
+}
+
+.collapsed {
+    height: 0 !important;
+}

@@ -1,0 +1,26 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+  <ion-searchbar #searchBar [(ngModel)]="keyword" [showCancelButton]="'focus'" cancelButtonText="取消"
+    (ionInput)="startSearch(keyword);" placeholder="搜索" animated>
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <div class="empty-error-box" *ngIf="!!error">
+    {{error}}
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of data" (click)="selectItem(item);">
+      <ion-label>
+        {{item.split('|')[0]}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

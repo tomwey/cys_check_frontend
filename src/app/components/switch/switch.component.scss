@@ -1,0 +1,66 @@
+.switch {
+    display: inline-block;
+    width: 76px;
+    height: 34px;
+    border-radius: 40px;
+    background: #ccc;
+    position: relative;
+
+    &.animate {
+        &.off {
+            .switch-inner,.text {
+                transition: all .3s ease;
+            }
+            transition: all .3s ease;
+        }
+        &.on {
+            .switch-inner,.text {
+                transition: all .3s ease;
+            }
+            transition: all .3s ease;
+        }
+    }
+
+    &.on {
+        .switch-inner {
+            left: 44px;
+        }
+
+        .text {
+            left: 5px;
+        }
+    }
+
+    &.off {
+        .switch-inner {
+            left: 2px;
+        }
+        .text {
+            left: 32px;
+        }
+    }
+    .switch-inner {
+        position: absolute;
+        top: 2px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        // box-shadow: 0 0 1px #333;
+        
+        background: #efefef;
+    }
+    .text {
+        position: absolute;
+        top: 2px;
+        display: inline-block;
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: 'PingFang SC', Arial, Helvetica, sans-serif;
+    }
+}
